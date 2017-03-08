@@ -6,7 +6,7 @@ class QiuBaiSpider(scrapy.Spider) :
 	]
 
 	def parse(self, response) :
-		tmp = response.xpath('//div[@class="author"]/a').extract()
+		tmp = response.xpath('//div[@class="author clearfix"]/a[2]/h2').extract()
 		#tmp = response.xpath('//head/title').extract()
 		for t in tmp :
 			print t.encode('utf-8')
